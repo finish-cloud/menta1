@@ -15,6 +15,10 @@ def search():
         print("{}が見つかりました".format(word))
     else:
         print("{}は見つかりませんでした".format(word))
+        # 追加
+        add_chara = input("追加登録しますか？(0:しない 1:する)　＞＞　")
+        if add_chara == "1":
+            source.append(word)
 
 
 if __name__ == "__main__":
