@@ -27,9 +27,13 @@ def search():
                 source.append(word)
 
         df = pd.DataFrame(source, columns=["name"])
-        df.to_csv("./Book1.csv", encoding="utf_8-sig")
+        df.to_csv("./Book1.csv", encoding="utf_8-sig",
+                  index=False,  header=False)
         print(source)
 
+
+# CSV ファイル (employee.csv) として出力
+# df.to_csv("employee.csv", index=False, encoding="utf-8", mode='a')
 
 if __name__ == "__main__":
     search()
