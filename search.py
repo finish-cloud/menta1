@@ -26,6 +26,10 @@ def search():
             if add_chara == "1":
                 source.append(word)
 
+        df = pd.DataFrame(source, columns=["name"])
+        df.to_csv("./Book1.csv", encoding="utf_8-sig")
+        print(source)
+
 
 if __name__ == "__main__":
     search()
